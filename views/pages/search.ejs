@@ -1,0 +1,53 @@
+<!-- views/pages/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+      <div class="row">
+          <p style="font-weight:bold;"> Search results for  <%- searchFor %> </p>
+      </div>
+
+      <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th>ID</th>
+                <th>TORRENT NAME</th>
+                <th>SIZE</th>
+                <th>FILES</th>
+                <th>VOTES</th>
+                <th>SEED</th>
+                <th>LEECH</th>
+              </tr>
+
+              <% for(var i=0; i < data.length; i++) { %>
+                 <tr>
+                   <td><%= i %></td>
+                   <td><%= data[i].title %></td>
+                   <td><%= filesize(data[i].size) %></td>
+                   <td><%= data[i].files %></td>
+                   <td><%= data[i].votes %></td>
+                   <td><%= data[i].seeds %></td>
+                   <td><%= data[i].leechs %></td>
+                 </tr>
+              <% } %>
+            </table>
+          </div>
+      </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>

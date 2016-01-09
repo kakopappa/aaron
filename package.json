@@ -1,0 +1,21 @@
+{
+  "name": "aaron",
+  "version": "0.0.1",
+  "description": "Home automation project using Amazon Alexa, RaspberryPI, Transmission torrent downloads and bunch of sensors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kakopappa/aaron.git"
+  },
+  "author": "Aruna Tennakoon",
+  "license": "I dont really care",
+  "homepage": "https://github.com/kakopappa/aaron#readme",
+  "dependencies": {
+    "express": "4.13.3",
+    "body-parser": "1.14.2",
+    "cookie-parser": "1.4.0",
+    "ejs": "2.3.4",
+    "filesize": "3.1.5",
+    "kickass-api": "0.0.3",
+    "transmission": "0.4.3"
+  }
+}

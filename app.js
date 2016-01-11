@@ -5,6 +5,7 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 var Transmission = require('transmission');
+var request = require('request');
 
 var app = express();
 app.locals.filesize = filesize
@@ -40,6 +41,32 @@ app.get('/t/search', function(req, res) {
         console.log(error);
         res.send(error);
     });
+});
+
+
+// for kankun power socket. http://192.168.1.103/cgi-bin/json.cgi
+app.get('/tv-power/on', function(req, res) {
+  request("http://192.168.1.103/cgi-bin/json.cgi?set=on", function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.send(body);
+    }
+  });
+});
+
+app.get('/tv-power/off', function(req, res) {
+  request("http://192.168.1.103/cgi-bin/json.cgi?set=off", function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.send(body);
+    }
+  });
+});
+
+app.get('/tv-power/status', function(req, res) {
+  request("http://192.168.1.103/cgi-bin/json.cgi?get=state", function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.send(body);
+    }
+  });
 });
 
 //http://localhost:8081/t/download?id=0

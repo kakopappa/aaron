@@ -1,0 +1,231 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'node-dht-sensor' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json aaron@0.0.1 No README data
+6 warn package.json alexa-app-server@2.2.4 No repository field.
+7 warn package.json kickass-api@0.0.3 No repository field.
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'node-dht-sensor@0.0.8', null ]
+10 verbose cache add name=undefined spec="node-dht-sensor@0.0.8" args=["node-dht-sensor@0.0.8",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'node-dht-sensor@0.0.8',
+11 verbose parsed url   path: 'node-dht-sensor@0.0.8',
+11 verbose parsed url   href: 'node-dht-sensor@0.0.8' }
+12 verbose cache add name="node-dht-sensor" spec="0.0.8" args=["node-dht-sensor","0.0.8"]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '0.0.8',
+13 verbose parsed url   path: '0.0.8',
+13 verbose parsed url   href: '0.0.8' }
+14 verbose addNamed [ 'node-dht-sensor', '0.0.8' ]
+15 verbose addNamed [ '0.0.8', '0.0.8' ]
+16 silly lockFile 08d54942-node-dht-sensor-0-0-8 node-dht-sensor@0.0.8
+17 verbose lock node-dht-sensor@0.0.8 C:\Users\Aruna\AppData\Roaming\npm-cache\08d54942-node-dht-sensor-0-0-8.lock
+18 verbose url raw node-dht-sensor/0.0.8
+19 verbose url resolving [ 'https://registry.npmjs.org/', './node-dht-sensor/0.0.8' ]
+20 verbose url resolved https://registry.npmjs.org/node-dht-sensor/0.0.8
+21 info trying registry request attempt 1 at 22:22:43
+22 http GET https://registry.npmjs.org/node-dht-sensor/0.0.8
+23 http 200 https://registry.npmjs.org/node-dht-sensor/0.0.8
+24 silly registry.get cb [ 200,
+24 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly registry.get     etag: '"1X5BABJVHHQ2180ZZD0AOFKVK"',
+24 silly registry.get     'content-type': 'application/json',
+24 silly registry.get     'cache-control': 'max-age=300',
+24 silly registry.get     'content-length': '951',
+24 silly registry.get     'accept-ranges': 'bytes',
+24 silly registry.get     date: 'Mon, 11 Jan 2016 15:22:32 GMT',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     age: '0',
+24 silly registry.get     connection: 'keep-alive',
+24 silly registry.get     'x-served-by': 'cache-sin6923-SIN',
+24 silly registry.get     'x-cache': 'MISS',
+24 silly registry.get     'x-cache-hits': '0',
+24 silly registry.get     'x-timer': 'S1452525752.072977,VS0,VE206',
+24 silly registry.get     vary: 'Accept' } ]
+25 silly lockFile 620acda0-sensor-node-dht-sensor-0-0-8-tgz https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz
+26 verbose lock https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz C:\Users\Aruna\AppData\Roaming\npm-cache\620acda0-sensor-node-dht-sensor-0-0-8-tgz.lock
+27 verbose addRemoteTarball [ 'https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz',
+27 verbose addRemoteTarball   'e3d7d6376bbd8c9cad450a13d30bd4d85d8cf55e' ]
+28 info retry fetch attempt 1 at 22:22:44
+29 verbose fetch to= C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\tmp.tgz
+30 http GET https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz
+31 http 200 https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz
+32 verbose tar unpack C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\tmp.tgz
+33 silly lockFile 525545c3-4827-0-07243207236751914-package tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package
+34 verbose lock tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package C:\Users\Aruna\AppData\Roaming\npm-cache\525545c3-4827-0-07243207236751914-package.lock
+35 silly lockFile 0e730c2f-4827-0-07243207236751914-tmp-tgz tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\tmp.tgz
+36 verbose lock tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\tmp.tgz C:\Users\Aruna\AppData\Roaming\npm-cache\0e730c2f-4827-0-07243207236751914-tmp-tgz.lock
+37 silly gunzTarPerm modes [ '755', '644' ]
+38 silly gunzTarPerm extractEntry package.json
+39 silly gunzTarPerm extractEntry .npmignore
+40 silly gunzTarPerm extractEntry README.md
+41 silly gunzTarPerm extractEntry LICENSE
+42 silly gunzTarPerm extractEntry test-spec.js
+43 silly gunzTarPerm extractEntry test.js
+44 silly gunzTarPerm extractEntry binding.gyp
+45 silly gunzTarPerm extractEntry check-bcm2835
+46 silly gunzTarPerm extractEntry node-dht-sensor.cpp
+47 silly lockFile 525545c3-4827-0-07243207236751914-package tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package
+48 silly lockFile 525545c3-4827-0-07243207236751914-package tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package
+49 silly lockFile 0e730c2f-4827-0-07243207236751914-tmp-tgz tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\tmp.tgz
+50 silly lockFile 0e730c2f-4827-0-07243207236751914-tmp-tgz tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\tmp.tgz
+51 verbose tar pack [ 'C:\\Users\\Aruna\\AppData\\Roaming\\npm-cache\\node-dht-sensor\\0.0.8\\package.tgz',
+51 verbose tar pack   'C:\\Users\\Aruna\\AppData\\Local\\Temp\\npm-6704-2Vx6tXt1\\1452525764827-0.07243207236751914\\package' ]
+52 verbose tarball C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+53 verbose folder C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package
+54 silly lockFile 525545c3-4827-0-07243207236751914-package tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package
+55 verbose lock tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package C:\Users\Aruna\AppData\Roaming\npm-cache\525545c3-4827-0-07243207236751914-package.lock
+56 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+57 verbose lock tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz C:\Users\Aruna\AppData\Roaming\npm-cache\6ccbfa32-ode-dht-sensor-0-0-8-package-tgz.lock
+58 silly lockFile 525545c3-4827-0-07243207236751914-package tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package
+59 silly lockFile 525545c3-4827-0-07243207236751914-package tar://C:\Users\Aruna\AppData\Local\Temp\npm-6704-2Vx6tXt1\1452525764827-0.07243207236751914\package
+60 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+61 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+62 silly lockFile 126a89c9-he-node-dht-sensor-0-0-8-package C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package
+63 verbose lock C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package C:\Users\Aruna\AppData\Roaming\npm-cache\126a89c9-he-node-dht-sensor-0-0-8-package.lock
+64 silly lockFile 126a89c9-he-node-dht-sensor-0-0-8-package C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package
+65 silly lockFile 126a89c9-he-node-dht-sensor-0-0-8-package C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package
+66 verbose tar unpack C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+67 silly lockFile b501f430-he-node-dht-sensor-0-0-8-package tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package
+68 verbose lock tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package C:\Users\Aruna\AppData\Roaming\npm-cache\b501f430-he-node-dht-sensor-0-0-8-package.lock
+69 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+70 verbose lock tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz C:\Users\Aruna\AppData\Roaming\npm-cache\6ccbfa32-ode-dht-sensor-0-0-8-package-tgz.lock
+71 silly gunzTarPerm modes [ '755', '644' ]
+72 silly gunzTarPerm extractEntry package.json
+73 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+74 silly gunzTarPerm extractEntry .npmignore
+75 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+76 silly gunzTarPerm extractEntry README.md
+77 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+78 silly gunzTarPerm extractEntry LICENSE
+79 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+80 silly gunzTarPerm extractEntry test-spec.js
+81 silly gunzTarPerm modified mode [ 'test-spec.js', 438, 420 ]
+82 silly gunzTarPerm extractEntry test.js
+83 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+84 silly gunzTarPerm extractEntry binding.gyp
+85 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+86 silly gunzTarPerm extractEntry check-bcm2835
+87 silly gunzTarPerm modified mode [ 'check-bcm2835', 438, 420 ]
+88 silly gunzTarPerm extractEntry node-dht-sensor.cpp
+89 silly gunzTarPerm modified mode [ 'node-dht-sensor.cpp', 438, 420 ]
+90 silly lockFile b501f430-he-node-dht-sensor-0-0-8-package tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package
+91 silly lockFile b501f430-he-node-dht-sensor-0-0-8-package tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package
+92 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+93 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+94 verbose chmod C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz 644
+95 silly chown skipping for windows C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+96 silly lockFile 620acda0-sensor-node-dht-sensor-0-0-8-tgz https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz
+97 silly lockFile 620acda0-sensor-node-dht-sensor-0-0-8-tgz https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz
+98 silly lockFile 08d54942-node-dht-sensor-0-0-8 node-dht-sensor@0.0.8
+99 silly lockFile 08d54942-node-dht-sensor-0-0-8 node-dht-sensor@0.0.8
+100 silly resolved [ { author: { name: 'David Momenso' },
+100 silly resolved     name: 'node-dht-sensor',
+100 silly resolved     description: 'Read data from DHT sensors on Raspberry Pi',
+100 silly resolved     version: '0.0.8',
+100 silly resolved     repository: { url: 'https://github.com/momenso/node-dht-sensor' },
+100 silly resolved     scripts: { install: './check-bcm2835' },
+100 silly resolved     main: './build/Release/node-dht-sensor',
+100 silly resolved     dependencies: {},
+100 silly resolved     engines: { node: '>=0.12 <0.13' },
+100 silly resolved     license: 'LGPL',
+100 silly resolved     readme: '# node-dht-sensor\n\nThis node.js module supports querying air temperature and relative humidity from a compatible DHT sensor.\n\n## Installation\n``` bash\n$ npm install node-dht-sensor\n```\n\n## Usage\n\nThis module uses the [BCM2835](http://www.airspayce.com/mikem/bcm2835/) library that requires access to \n/open/mem. Because of this, you will typically run node with admin privileges.\n\nThe first step is initializing the sensor by specifying the sensor type and which GPIO pin the sensor is connected. It should work for DHT11, DHT22 and AM2302 sensors. If the initialization succeeds when you can call the read function to obtain the latest readout from the sensor. Readout values contains a temperature and a humidity property.\n\n### First Example\n\nThis sample queries the AM2302 sensor connected to the GPIO 4 every 2 seconds and displays the result on the console. \n\n``` javascript\nvar sensorLib = require(\'node-dht-sensor\');\n\nvar sensor = {\n    initialize: function () {\n        return sensorLib.initialize(22, 4);\n    },\n    read: function () {\n        var readout = sensorLib.read();\n        console.log(\'Temperature: \' + readout.temperature.toFixed(2) + \'C, \' +\n            \'humidity: \' + readout.humidity.toFixed(2) + \'%\');\n        setTimeout(function () {\n            sensor.read();\n        }, 2000);\n    }\n};\n\nif (sensor.initialize()) {\n    sensor.read();\n} else {\n    console.warn(\'Failed to initialize sensor\');\n}\n```\n\n### Multiple Sensors Example\n\nThe following example shows a method for querying multiple sensors connected to the same Raspberry Pi. For this example, we have two sensors:\n\n1. A DHT11 sensor connected to GPIO 17\n2. High-resolution DHT22 sensor connected to GPIO 4\n\n``` javascript\nvar sensorLib = require("node-dht-sensor");\n\nvar sensor = {\n    sensors: [ {\n        name: "Indoor",\n        type: 11,\n        pin: 17\n    }, {\n        name: "Outdoor",\n        type: 22,\n        pin: 4\n    } ],\n    read: function() {\n        for (var a in this.sensors) {\n            var b = sensorLib.readSpec(this.sensors[a].type, this.sensors[a].pin);\n            console.log(this.sensors[a].name + ": " + \n              b.temperature.toFixed(1) + "C, " + \n              b.humidity.toFixed(1) + "%");\n        }\n        setTimeout(function() {\n            sensor.read();\n        }, 2000);\n    }\n};\n\nsensor.read();\n```\n\n\n### Reference for building from source\n\nStandard node-gyp commands are used to build the module.\n\n1. Generate the configuration files\n``` bash\n$ node-gyp configure\n```\n2. Build the component\n``` bash\n$ node-gyp build\n```\n\n### Verbose output\n\nVerbose output from the module can be enabled by defining ```VERBOSE``` during the module compilation. For example, this can be enabled via the binging,gyp file:\n\n``` javascript\n{\n  \'targets\': [\n    {\n      \'target_name\': \'node-dht-sensor\',\n      \'sources\': [ \'node-dht-sensor.cpp\' ],\n      \'libraries\': [ \'-lbcm2835\' ],\n      \'defines\': [ \'VERBOSE\']\n    }\n  ]\n}\n```\n\n### Appendix A: Quick Node.js installation guide\n\nThere are many ways you can get Node.js installed on your Raspberry Pi but the following method is very convenient for getting started on the latest version, very quickly.\n``` shell\n$ wget http://node-arm.herokuapp.com/node_latest_armhf.deb \n$ sudo dpkg -i node_latest_armhf.deb\n```\n\n\n### References\n\n[1]: Node.js latest release - http://nodejs.org/dist/latest/\n\n[2]: BCM2835 - http://www.airspayce.com/mikem/bcm2835/\n\n[3]: Node.js native addon build tool - https://github.com/TooTallNate/node-gyp\n\n',
+100 silly resolved     readmeFilename: 'README.md',
+100 silly resolved     bugs: { url: 'https://github.com/momenso/node-dht-sensor/issues' },
+100 silly resolved     homepage: 'https://github.com/momenso/node-dht-sensor',
+100 silly resolved     _id: 'node-dht-sensor@0.0.8',
+100 silly resolved     dist: { shasum: 'fe94bc55722e5611048af326bcbad52481964f1c' },
+100 silly resolved     _from: 'node-dht-sensor@0.0.8',
+100 silly resolved     _resolved: 'https://registry.npmjs.org/node-dht-sensor/-/node-dht-sensor-0.0.8.tgz' } ]
+101 info install node-dht-sensor@0.0.8 into D:\MyProjects\home_automation\aaron
+102 info installOne node-dht-sensor@0.0.8
+103 warn engine node-dht-sensor@0.0.8: wanted: {"node":">=0.12 <0.13"} (current: {"node":"v0.10.26","npm":"1.4.3"})
+104 info D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor unbuild
+105 verbose tar unpack C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+106 silly lockFile 4d0ee7b2-ron-node-modules-node-dht-sensor tar://D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor
+107 verbose lock tar://D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor C:\Users\Aruna\AppData\Roaming\npm-cache\4d0ee7b2-ron-node-modules-node-dht-sensor.lock
+108 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+109 verbose lock tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz C:\Users\Aruna\AppData\Roaming\npm-cache\6ccbfa32-ode-dht-sensor-0-0-8-package-tgz.lock
+110 silly gunzTarPerm modes [ '755', '644' ]
+111 silly gunzTarPerm extractEntry package.json
+112 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+113 silly gunzTarPerm extractEntry .npmignore
+114 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+115 silly gunzTarPerm extractEntry README.md
+116 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+117 silly gunzTarPerm extractEntry LICENSE
+118 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+119 silly gunzTarPerm extractEntry test-spec.js
+120 silly gunzTarPerm modified mode [ 'test-spec.js', 438, 420 ]
+121 silly gunzTarPerm extractEntry test.js
+122 silly gunzTarPerm modified mode [ 'test.js', 438, 420 ]
+123 silly gunzTarPerm extractEntry binding.gyp
+124 silly gunzTarPerm modified mode [ 'binding.gyp', 438, 420 ]
+125 silly gunzTarPerm extractEntry check-bcm2835
+126 silly gunzTarPerm modified mode [ 'check-bcm2835', 438, 420 ]
+127 silly gunzTarPerm extractEntry node-dht-sensor.cpp
+128 silly gunzTarPerm modified mode [ 'node-dht-sensor.cpp', 438, 420 ]
+129 silly lockFile 4d0ee7b2-ron-node-modules-node-dht-sensor tar://D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor
+130 silly lockFile 4d0ee7b2-ron-node-modules-node-dht-sensor tar://D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor
+131 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+132 silly lockFile 6ccbfa32-ode-dht-sensor-0-0-8-package-tgz tar://C:\Users\Aruna\AppData\Roaming\npm-cache\node-dht-sensor\0.0.8\package.tgz
+133 info preinstall node-dht-sensor@0.0.8
+134 verbose readDependencies using package.json deps
+135 verbose readDependencies using package.json deps
+136 silly resolved []
+137 verbose about to build D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor
+138 info build D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor
+139 verbose linkStuff [ false,
+139 verbose linkStuff   false,
+139 verbose linkStuff   false,
+139 verbose linkStuff   'D:\\MyProjects\\home_automation\\aaron\\node_modules' ]
+140 info linkStuff node-dht-sensor@0.0.8
+141 verbose linkBins node-dht-sensor@0.0.8
+142 verbose linkMans node-dht-sensor@0.0.8
+143 verbose rebuildBundles node-dht-sensor@0.0.8
+144 info install node-dht-sensor@0.0.8
+145 verbose unsafe-perm in lifecycle true
+146 info node-dht-sensor@0.0.8 Failed to exec install script
+147 info D:\MyProjects\home_automation\aaron\node_modules\node-dht-sensor unbuild
+148 info preuninstall node-dht-sensor@0.0.8
+149 info uninstall node-dht-sensor@0.0.8
+150 verbose true,D:\MyProjects\home_automation\aaron\node_modules,D:\MyProjects\home_automation\aaron\node_modules unbuild node-dht-sensor@0.0.8
+151 info postuninstall node-dht-sensor@0.0.8
+152 error node-dht-sensor@0.0.8 install: `./check-bcm2835`
+152 error Exit status 1
+153 error Failed at the node-dht-sensor@0.0.8 install script.
+153 error This is most likely a problem with the node-dht-sensor package,
+153 error not with npm itself.
+153 error Tell the author that this fails on your system:
+153 error     ./check-bcm2835
+153 error You can get their info via:
+153 error     npm owner ls node-dht-sensor
+153 error There is likely additional logging output above.
+154 error System Windows_NT 6.1.7601
+155 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "node-dht-sensor"
+156 error cwd D:\MyProjects\home_automation\aaron
+157 error node -v v0.10.26
+158 error npm -v 1.4.3
+159 error code ELIFECYCLE
+160 verbose exit [ 1, true ]

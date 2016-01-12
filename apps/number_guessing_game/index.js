@@ -13,6 +13,7 @@ app.launch(function(req,res) {
 	var prompt = "Guess a number between 1 and 100!";
 	res.say(prompt).reprompt(prompt).shouldEndSession(false);
 });
+
 app.intent('guess',{
 		"slots":{"guess":"NUMBER"}
 		,"utterances":["{1-100|guess}"]
@@ -40,4 +41,5 @@ app.intent('guess',{
 		}
 	}
 );
+
 module.exports = app;

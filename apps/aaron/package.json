@@ -1,0 +1,14 @@
+{
+  "name": "aaron",
+  "version": "1.0.0",
+  "description": "Home autiomation app",
+  "main": "index.js",
+  "author": "Aruna Tennakoon <aruna.tennakoon@gmail.com>",
+  "license": "ISC",
+  "alexa": {
+    "applicationId":""
+  },
+  "dependencies": {
+    "alexa-app": "^2.1.0"
+  }
+}

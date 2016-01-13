@@ -14,11 +14,13 @@ exports.startAlexaAppServer = function() {
   		// In reality, this data would come from a db or files, etc.
   		,preRequest: function(json,req,res) {
   			console.log("preRequest fired");
+    		        console.log(req.body);
   			//json.userDetails = { "name":"Bob Smith" };
   		}
   		// Add a dummy attribute to the response
   		,postRequest: function(json,req,res) {
   			console.log("postRequest fired");
+		        console.log(req.body);
   		}
 	} );
 };

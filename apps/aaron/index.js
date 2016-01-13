@@ -1,4 +1,5 @@
 var alexa = require('alexa-app');
+var request = require("request");
 
 // Allow this module to be reloaded by hotswap when changed
 module.change_code = 1;
@@ -19,7 +20,8 @@ app.intent('HelpIntent',
         ]
     },
     function (request, response) {
-	    response.say("You can say something like what is the temperature of living room");
+	
+	response.say("You can say something like what is the temperature of living room");
     }
 );
 
@@ -29,13 +31,18 @@ app.intent('TurnOnTvIntent',
 		"utterances":["turn on the tv"]
 	},
 	function(req, response) {
-		http.get("http://localhost:8081/tv-power/on", function(res) {
-			response.say(res.statusText);
-			response.send();
+		console.log("Got TurnOnTvIntent intent");
+
+		request("http://localhost:8081/tv-power/on", function(error, res, body) {
+		  console.log(body);
+
+                  console.log("Got response from aaron: " + body);
+                  response.say(body);
+		  response.send();
 		});
 
-			// Return false immediately so alexa-app doesn't send the response
-    	return false;
+		// Return false immediately so alexa-app doesn't send the response
+    		return false;
 	}
 );
 
@@ -45,15 +52,56 @@ app.intent('TurnOffTvIntent',
 		"utterances":["turn off the tv"]
 	},
 	function(req, response) {
-		http.get("http://localhost:8081/tv-power/off", function(res) {
-			response.say(res.statusText);
-			response.send();
-		});
+		console.log("Got TurnOffTvIntent intent");
+		
+                request("http://localhost:8081/tv-power/off", function(error, res, body) {
+                  console.log(body);
 
-			// Return false immediately so alexa-app doesn't send the response
-    	return false;
+                  console.log("Got response from aaron: " + body);
+                  response.say(body);
+		  response.send();
+                });
+
+		// Return false immediately so alexa-app doesn't send the response
+	    	return false;
 	}
 );
+
+
+// ----------------------
+// KODI
+//-----------------------
+
+app.intent('StartKodiIntent',
+        {
+                "slots": {},
+                "utterances":["start kodi"]
+        },
+        function(req, response) {
+                  console.log("Got StartKodiIntent intent");
+
+                  request("http://localhost:8081/kodi/start", function(error, res, body) {
+                  
+                  console.log("Got response from aaron: " + body);
+                  response.say("OK, Starting Kodi now");
+                  response.send();
+                });
+
+                // Return false immediately so alexa-app doesn't send the response
+                return false;
+        }
+);
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = app;
 

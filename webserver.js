@@ -7,6 +7,7 @@ var path = require('path');
 var Transmission = require('transmission');
 var request = require('request');
 var dht = require('./lib/sensors/temperature/dht.js');
+var kodi = require('./lib/kodi/index.js');
 
 var app = express();
 app.locals.filesize = filesize
@@ -51,7 +52,7 @@ app.get('/t/search', function(req, res) {
 app.get('/tv-power/on', function(req, res) {
   request("http://192.168.1.103/cgi-bin/json.cgi?set=on", function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      res.send("OK, Turning on TV on now");
+      res.send("OK, Turning on the TV now");
     }
   });
 });
@@ -59,7 +60,7 @@ app.get('/tv-power/on', function(req, res) {
 app.get('/tv-power/off', function(req, res) {
   request("http://192.168.1.103/cgi-bin/json.cgi?set=off", function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      res.send("OK, Turning off TV now");
+      res.send("OK, Turning off the TV now");
     }
   });
 });
@@ -71,6 +72,16 @@ app.get('/tv-power/status', function(req, res) {
     }
   });
 });
+
+app.get('/kodi/start', function(req, res) {
+ console.log("Starting Kodi");
+ kodi.start();	
+}
+
+app.get('/kodi/stop', function(req, res) {
+ console.log("Quit Kodi");
+ kodi.quit();
+}
 
 app.get('/currentTemperatureAndHumidity', function(req, res) {
   res.send(dht.getTemperatureAndHumidity());

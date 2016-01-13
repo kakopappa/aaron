@@ -24,8 +24,8 @@ exports.startServer = function(input) {
 	var server = app.listen(8081, function () {
 	var host = server.address().address
 	var port = server.address().port
-		console.log("App listening at http://%s:%s", host, port)
-	})    
+		console.log("Webserver listening at http://%s:%s", host, port)
+	})
 };
 
 
@@ -47,12 +47,11 @@ app.get('/t/search', function(req, res) {
     });
 });
 
-
 // for kankun power socket. http://192.168.1.103/cgi-bin/json.cgi
 app.get('/tv-power/on', function(req, res) {
   request("http://192.168.1.103/cgi-bin/json.cgi?set=on", function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      res.send(body);
+      res.send("OK, Turning on TV on now");
     }
   });
 });
@@ -60,7 +59,7 @@ app.get('/tv-power/on', function(req, res) {
 app.get('/tv-power/off', function(req, res) {
   request("http://192.168.1.103/cgi-bin/json.cgi?set=off", function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      res.send(body);
+      res.send("OK, Turning off TV now");
     }
   });
 });
@@ -75,7 +74,7 @@ app.get('/tv-power/status', function(req, res) {
 
 app.get('/currentTemperatureAndHumidity', function(req, res) {
   res.send(dht.getTemperatureAndHumidity());
-}
+});
 
 //http://localhost:8081/t/download?id=0
 app.get('/t/download', function(req, res) {

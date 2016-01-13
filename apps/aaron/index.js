@@ -11,7 +11,7 @@ app.launch(function(req,res) {
 	res.shouldEndSession (false, "What would you like to know?  For examples, say help.  To leave ruuvu, say exit.");
 });
 
-app.intent('HelpIntent', 
+app.intent('HelpIntent',
     {
         "slots": {},
         "utterances": [
@@ -20,10 +20,45 @@ app.intent('HelpIntent',
     },
     function (request, response) {
 	    response.say("You can say something like what is the temperature of living room");
-    }    
+    }
 );
 
+app.intent('TurnOnTvIntent',
+	{
+		"slots": {},
+		"utterances":["turn on the tv"]
+	},
+	function(req, response) {
+		http.get("http://localhost:8081/tv-power/on", function(res) {
+			response.say(res.statusText);
+			response.send();
+		});
 
+			// Return false immediately so alexa-app doesn't send the response
+    	return false;
+	}
+);
+
+app.intent('TurnOffTvIntent',
+	{
+		"slots": {},
+		"utterances":["turn off the tv"]
+	},
+	function(req, response) {
+		http.get("http://localhost:8081/tv-power/off", function(res) {
+			response.say(res.statusText);
+			response.send();
+		});
+
+			// Return false immediately so alexa-app doesn't send the response
+    	return false;
+	}
+);
+
+module.exports = app;
+
+
+/*
 app.intent('NameIntent', {
 		"slots":{"NAME":"LITERAL","AGE":"NUMBER"}
 		,"utterances":["{My name is|my name's} {matt|bob|bill|jake|nancy|mary|jane|NAME} and I am {1-100|AGE}{ years old|}"]
@@ -40,25 +75,23 @@ app.intent('AgeIntent', {
 	}
 );
 
-app.intent('TemperatureIntent', 
+app.intent('TemperatureIntent',
 	{
 		"slots": {},
 		"utterances":["{what is|what's} temperature of living room"]
 	},
 	function(req,res) {
 		http.get("http://localhost:8081/currentTemperatureAndHumidity", function(res) {
-			// This is async and will run after the http call returns 
+			// This is async and will run after the http call returns
 			response.say(res.statusText);
-			// Must call send to end the original request 
+			// Must call send to end the original request
 			response.send();
 		});
-	
-		// Return false immediately so alexa-app doesn't send the response 
+
+		// Return false immediately so alexa-app doesn't send the response
     	return false;
 	}
 );
-
-module.exports = app;
-
+*/
 
 // http://www.smorgasbork.com/2015/09/06/ruuvu-building-an-alexa-skill-with-alexa-app/

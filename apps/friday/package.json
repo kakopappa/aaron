@@ -1,0 +1,14 @@
+{
+  "name": "friday",
+  "version": "1.0.0",
+  "description": "Home autiomation app",
+  "main": "index.js",
+  "author": "Aruna Tennakoon <aruna.tennakoon@gmail.com>",
+  "license": "ISC",
+  "alexa": {
+    "applicationId":"amzn1.echo-sdk-ams.app.889205a4-733b-47f9-8344-2d924cae669e"
+  },
+  "dependencies": {
+    "alexa-app": "^2.1.0"
+  }
+}

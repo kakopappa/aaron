@@ -7,7 +7,9 @@ var path = require('path');
 var Transmission = require('transmission');
 var request = require('request');
 var dht = require('./lib/sensors/temperature/dht.js');
-var kodi = require('./lib/kodi/index.js');
+var kodi = require('./lib/kodi/index.js').Kodi;
+var util = require('./lib/util.js').Util;
+var dht = require('./lib/sensors/temperature/dht.js').Dht
 
 var app = express();
 app.locals.filesize = filesize
@@ -73,19 +75,47 @@ app.get('/tv-power/status', function(req, res) {
   });
 });
 
+// -- KODI
+
 app.get('/kodi/start', function(req, res) {
  console.log("Starting Kodi");
- kodi.start();	
-}
+ kodi.start();
+ res.send("OK, Starting Kodi now");
+});
 
 app.get('/kodi/stop', function(req, res) {
  console.log("Quit Kodi");
- kodi.quit();
-}
-
-app.get('/currentTemperatureAndHumidity', function(req, res) {
-  res.send(dht.getTemperatureAndHumidity());
+ kodi.stop();
+ res.send("OK, Stopping Kodi now");
 });
+
+app.get('/kodi/start/genesis', function(req, res) {
+ console.log("Got start Genesis request");
+ kodi.startGenesis();
+ res.send("OK, Starting genesis now");
+});
+
+
+// -- SELF
+
+app.get('/self/restart', function(req, res) {
+ console.log("Restarting now..");
+ res.send("OK, Restarting now");
+
+ util.exec("shutdown -r now", function () {
+     console.log("rebooting now ..");
+ });
+});
+
+// -- SENSORS
+app.get('/sensor/temperature', function(req, res) {
+ dht.read(function(str) {
+   res.send(str);
+ });
+});
+
+
+// -- TORRENTS
 
 //http://localhost:8081/t/download?id=0
 app.get('/t/download', function(req, res) {
